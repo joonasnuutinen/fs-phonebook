@@ -41,12 +41,14 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: afternoon-savannah-62909
           heroku_email: joonas@autua.fi
-          healthcheck: 
+          healthcheck: https://afternoon-savannah-62909.herokuapp.com/health
           checkstring: ok
           rollbackonhealthcheckfailed: true
+      - uses: actions/checkout@v2
       - name: bump version and push tag
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip') }}
         uses: anothrNick/github-tag-action@1.33.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
+          RELEASE_BRANCHES: main
