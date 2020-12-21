@@ -41,7 +41,7 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: afternoon-savannah-62909
           heroku_email: joonas@autua.fi
-          healthcheck: 
+          healthcheck: https://afternoon-savannah-62909.herokuapp.com/health
           checkstring: ok
           rollbackonhealthcheckfailed: true
       - name: bump version and push tag
