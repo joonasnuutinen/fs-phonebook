@@ -11,6 +11,7 @@ jobs:
     env:
       SKIP_PREFLIGHT_CHECK: true
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      PORT: 3001
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -24,3 +25,9 @@ jobs:
         run: npm run build
       - name: test
         run: npm test
+      - name: e2e tests
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test:e2e
+          start: npm start
+          wait-on: http://localhost:3001

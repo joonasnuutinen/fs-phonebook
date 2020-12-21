@@ -11,7 +11,7 @@ module.exports = {
     'ecmaVersion': 12
   },
   'plugins': [
-    'jest', 'cypress'
+    'cypress'
   ],
   'rules': {
     'indent': [
