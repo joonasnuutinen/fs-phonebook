@@ -16,7 +16,7 @@ const PersonForm = (props) => {
     newNumber,
     handleNumberChange
   } = props
-  
+
   return (
     <form onSubmit={onSubmit}>
       <Input label="name" value={newName} onChange={handleNameChange} />
@@ -82,7 +82,7 @@ const App = () => {
         setPersons(initialPersons)
       })
   }, [])
-  
+
   const addPerson = (event) => {
     event.preventDefault()
     if (persons.map(person => person.name).indexOf(newName) !== -1) {
@@ -163,7 +163,7 @@ const App = () => {
       setMessage(null)
     }, 5000)
   }
-  
+
   return (
     <div>
       <h1>Phonebook</h1>
@@ -177,11 +177,11 @@ const App = () => {
         newNumber={newNumber}
         handleNumberChange={handleNumberChange}
       />
-      
+
       <h2>Numbers</h2>
       <PersonsList persons={persons} filter={newFilter} removePerson={removePerson} />
     </div>
-  );
+  )
 }
 
 export default App

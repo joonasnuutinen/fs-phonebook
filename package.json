@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "test": "cd client && npm test",
     "build": "cd client && rm -rf build && npm run build",
-    "lint": "eslint ."
+    "lint": "eslint . && cd client && npm run lint"
   },
   "repository": {
     "type": "git",
