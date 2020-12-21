@@ -13,7 +13,7 @@ morgan.token('body', (req) => JSON.stringify(req.body))
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
 // Serve static content
-app.use(express.static('build'))
+app.use(express.static('client/build'))
 
 app.get('/info', (req, res) => {
   Person.count({}).then(num => {

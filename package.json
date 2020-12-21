@@ -1,25 +1,26 @@
 {
-  "name": "fs-puhelinluettelo-backend",
+  "name": "fs-phonebook",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "start:ui": "cd client && npm start",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "cd client && rm -rf build && npm run build",
+    "test": "cd client && npm test",
+    "build": "cd client && rm -rf build && npm run build",
     "lint": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joonasnuutinen/fs-puhelinluettelo-backend.git"
+    "url": "git+https://github.com/joonasnuutinen/fs-phonebook.git"
   },
   "author": "Joonas Nuutinen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joonasnuutinen/fs-puhelinluettelo-backend/issues"
+    "url": "https://github.com/joonasnuutinen/fs-phonebook/issues"
   },
-  "homepage": "https://github.com/joonasnuutinen/fs-puhelinluettelo-backend#readme",
+  "homepage": "https://github.com/joonasnuutinen/fs-phonebook#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
