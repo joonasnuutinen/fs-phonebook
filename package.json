@@ -9,6 +9,7 @@
     "dev": "cross-env NODE_ENV=development nodemon index.js",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
     "build": "cd client && rm -rf build && npm run build",
+    "heroku-postbuild": "cd client && npm install && rm -rf build && npm run build",
     "lint": "eslint . && cd client && npm run lint",
     "install:all": "npm install && cd client && npm install",
     "cypress:open": "cypress open",
