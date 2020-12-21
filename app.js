@@ -16,6 +16,10 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms :b
 // Serve static content
 app.use(express.static('client/build'))
 
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
 app.get('/info', (req, res) => {
   Person.count({}).then(num => {
     const content = `

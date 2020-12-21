@@ -37,3 +37,6 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: afternoon-savannah-62909
           heroku_email: joonas@autua.fi
+          healthcheck: 
+          checkstring: ok
+          rollbackonhealthcheckfailed: true
