@@ -1,3 +1,5 @@
 # fs-phonebook
 
-[Live demo](https://blooming-waters-85360.herokuapp.com/)
+[Phonebook deployment](https://afternoon-savannah-62909.herokuapp.com/)
+
+[Pokedex repository](https://github.com/joonasnuutinen/full-stack-open-pokedex)
